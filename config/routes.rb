@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'pages#index' # redireccionamos la página inicial al root
   
   #definimos las rutas para las páginas
