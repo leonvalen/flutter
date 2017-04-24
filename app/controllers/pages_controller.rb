@@ -5,10 +5,12 @@ class PagesController < ApplicationController
   
 # Backend para pages/index
   def index
+    #@posts = Post.all
   end
 
 # Backend para pages/home
   def home
+    @posts = Post.all
   end
 
 # Backend para pages/profile
@@ -18,10 +20,12 @@ class PagesController < ApplicationController
   	else
   		redirect_to root_path, :notice=> "Usuario no encontrado" 
   	end
+    @posts = Post.all.where("user_id = ?", User.find_by_username(params[:id]))
   end
 
 # Backend para pages/explore
   def explore
+    @posts = Post.all
   end
   
 end
