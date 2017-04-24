@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :posts
   #devise_for :users, path: 'usuarios', path_names: { sign_in: 'Iniciar_sesión', sign_out: 'Cerrar_sesión', password: 'Contraseña', confirmation: 'Confirmación', unlock: 'Desbloquear', registration: 'Registro', sign_up: 'Registrarse' }
   root 'pages#index' # redireccionamos la página inicial al root
   

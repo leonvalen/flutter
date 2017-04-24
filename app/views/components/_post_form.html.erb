@@ -1,0 +1,9 @@
+<%= form_for(@newPost) do |f| %>
+  <div class="field">
+    <%= f.label :Nuevo_Tweet %><br />
+    <%= f.text_field :content, autofocus: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Agregar tweet" %>
+  </div>
+<% end %>
