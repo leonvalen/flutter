@@ -14,16 +14,17 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
+
 default: &default
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: db_flutter
 
 development:
   <<: *default
-  database: db_flutter
   username: user_flutter
   password: qwe123
   host: 192.168.1.101
@@ -60,11 +61,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db_flutter
   username: user_flutter
   password: qwe123
   host: 192.168.1.101
-
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
