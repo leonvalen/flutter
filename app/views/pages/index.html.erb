@@ -1,4 +1,3 @@
-
 <% if !user_signed_in?  %> <!-- Sin Logearse si el usuario no ha iniciado sesión renderiza esto -->
 
 <%
@@ -63,8 +62,10 @@
 	</div>
 	<div class="col-sm-6">
 		<div class="log-in panel">
+		Iniciar sesión:
 		</div>
 		<div class="sign-up panel">
+		Registrarse:
 		</div>
 	</div>
 	<div class="col-sm-12">
@@ -75,5 +76,7 @@
 </div>
 
 <% else  %> <!--Logeado  si el usuario está logeado has lo siguiente -->
+
+<script>document.location= "/home"</script>
 
 <% end %>

@@ -11,6 +11,7 @@ class PagesController < ApplicationController
 # Backend para pages/home
   def home
     @posts = Post.all
+    @newPost = Post.new
   end
 
 # Backend para pages/profile
