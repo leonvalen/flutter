@@ -1,2 +1,79 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+
+<% if !user_signed_in?  %> <!-- Sin Logearse si el usuario no ha iniciado sesión renderiza esto -->
+
+<%
+  num = ['1', '2']
+  aleatorio = num[rand(num.size)] 
+%>
+<style>
+	body {
+		background: linear-gradient(
+			rgba(0,0,0, 0.7),
+			rgba(0,0,0, 0.7)), url("/bg-<%=aleatorio%>.jpg") no-repeat center center fixed
+
+
+		; /* lo muestra una sola vez centrado horiz y vert */
+		-webkit-background-size: cover; /* cubre todos los elementos html */
+		-moz-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+	h1 {
+		color: white;
+		font-weight: bold;
+	}
+	.container-index{
+		margin-right: 15%;
+		margin-left: 15%;
+	}
+	.text{
+		color: white;
+		font-weight: 300;
+		font-size: 150%;
+	}
+	.footer-links{
+		text-align: center;
+		color: white;
+		margin-top: 20%;
+		font-size: 75%;
+	}
+	.log-in{
+		float: right;
+		width: 300px;
+		height: 150px;
+		margin-top: 7.5%;
+	}
+	.sign-up{
+		float: right;
+		width: 300px;
+		height: 250px;
+	}
+
+</style>
+<div class="container-index row">
+	<div class="col-sm-6">
+		<h1>Bienvenidos a Flutter</h1>
+		<p class="text">
+		Conéctate con tus amigos y otras personas 
+		fascinantes. Obtén actualizaciones instantáneas 
+		de las cosas que te interesan. Mira los eventos
+		que se están desarrollando, en tiempo real, desde
+		todos los ángulos.
+		</p>
+	</div>
+	<div class="col-sm-6">
+		<div class="log-in panel">
+		</div>
+		<div class="sign-up panel">
+		</div>
+	</div>
+	<div class="col-sm-12">
+		<p class="footer-links">
+		Sobre  nosotros  Centro de Ayuda  Blog  Estado  Empleos  Condiciones  Política de privacidad  Cookies  Información sobre anuncios  Marca  Anunciarse  Empresas  Desarrolladores  Directorio © 2017 Flutter
+		</p>
+	</div>
+</div>
+
+<% else  %> <!--Logeado  si el usuario está logeado has lo siguiente -->
+
+<% end %>
